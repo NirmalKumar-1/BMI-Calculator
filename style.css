@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(270deg, #f490f1 0%, #a08dce 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  background-color: #fff;
+  padding: 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.form-container {
+  background: #5f2a5e;
+  padding: 60px;
+  text-align: center;
+  border-radius: 0 5px 5px 0;
+  width: 100%;
+}
+
+.form-container h1,
+.form-container h2 {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.form-container .form form {
+  width: 100%;
+}
+
+.form-container .form input {
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.form-container .form input:focus {
+  outline: none;
+}
+
+.form-container .form input[type='submit'] {
+  background-color: #9a7bf2;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+.form-container .form input[type='submit']:hover {
+  background-color: #fec045;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #312222;
+  padding: 45px 100px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 70px -20px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.popup .bmi-score {
+  width: 100px;
+  height: 100px;
+  background: #5254ce;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #fff;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.popup .bmi-text {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.popup .close-btn {
+  padding: 10px 30px;
+  font-size: 16px;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* media queries */
+@media (max-width: 991px) {
+  .form-container {
+    border-radius: 0 0 5px 5px;
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup {
+    padding: 30px 40px;
+  }
+
+  .form-container {
+    padding: 30px 20px;
+  }
+
+  .form-container h1,
+  .form-container h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .popup {
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 412px) {
+  .popup {
+    width: 90%;
+    padding: 25px 15px;
+  }
+  .popup .bmi-score {
+    width: 80px;
+    height: 80px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 356px) {
+    input::placeholder {
+        font-size: 10px;
+        padding: 0;
+    }
+}
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="row py-2">
+        <div class="col-lg-5 col-12 image-container">
+          <img src="BMI-image.jpg" alt="BMI Illustration" class="img-fluid" />
+        </div>
+
+        <!-- form -->
+        <div class="col-lg-7 col-12">
+          <div
+            class="form-container d-flex flex-column justify-content-center align-items-center px-0"
+          >
+            <h1 class="fs-1">BMI</h1>
+            <h2>Calculator</h2>
+
+            <div class="form w-100 d-flex justify-content-center">
+              <form class="d-flex flex-column justify-content-center align-items-center w-75" onsubmit="return false">
+                <input
+                  type="number"
+                  class="form-control my-2 height"
+                  placeholder="Enter height in CM"
+                  required
+                />
+                <input
+                  type="number"
+                  class="form-control my-2 weight"
+                  placeholder="Enter weight in KG"
+                  required
+                />
+                <input
+                  type="submit"
+                  value="Calculate"
+                  class="btn btn-primary my-2 submitBTN"
+                />
+              </form>
+            </div>
+
+            <!-- popup -->
+            <div class="popup mt-4 text-center">
+              <div class="bmi-score fs-4 fw-bold mb-2"></div>
+              <div class="bmi-text fs-5 mb-2"></div>
+              <div class="close-btn btn btn-secondary">Close</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+  </body>
+</html>
